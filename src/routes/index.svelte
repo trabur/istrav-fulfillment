@@ -62,7 +62,7 @@
 </svelte:head>
 
 {#if appId}
-	<Logo />
+	<Logo domainId={domainId} rawApp={rawApp} />
 	<Nav selected='forum' appId={appId} />
 	<div class="dotted">
 		<div style="min-height: 100vh;"></div>
