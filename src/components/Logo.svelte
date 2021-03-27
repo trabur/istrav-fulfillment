@@ -44,6 +44,8 @@
 			{/if}
 			{#if rawApp}
 				<h1 class="slogan">{rawApp.sloganLine1 || ''}<br />{rawApp.sloganLine2 || ''}</h1>
+			{:else}
+				<h1 class="slogan">Community messaging<br />and bulletin board.</h1>
 			{/if}
 		</div>
 	</div>
@@ -91,7 +93,7 @@
 
 	.aaghc {
 		margin: 0 auto;
-		font-size: 5em;
+		font-size: 1.5em;
 		font-weight: 800;
 		text-align: center;
 		font-family: sans-serif;
