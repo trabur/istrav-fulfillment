@@ -93,7 +93,7 @@
 
 	.aaghc {
 		margin: 0 auto;
-		font-size: 1.5em;
+		font-size: 4em;
 		font-weight: 800;
 		text-align: center;
 		font-family: sans-serif;
