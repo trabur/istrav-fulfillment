@@ -12,7 +12,7 @@
     if (esNavigation.payload.success === true) {
       items = JSON.parse(esNavigation.payload.data.raw)
     } else {
-      alert(esNavigation.payload.reason)
+      console.log(esNavigation.payload.reason)
     }
     console.log('main menu', items)
   })
