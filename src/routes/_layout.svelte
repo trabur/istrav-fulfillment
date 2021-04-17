@@ -1,7 +1,19 @@
+<script context="module">
+  export async function preload(page, session) {
+    const { API_URI, IO_URI, HEADLESS_URI } = session;
+
+    return { 
+      apiUri: API_URI,
+      ioUri: IO_URI,
+      headlessUri: HEADLESS_URI,
+    };
+  }
+</script>
+
 {#if loading}
 <!-- do nothing -->
 {:else}
-<slot></slot>
+  <slot></slot>
 {/if}
 
 <div id="code"></div>
@@ -26,8 +38,8 @@
       console.log('localhost settings:', appDomain, backend, headless)
     } else {
       window.appDomain = window.location.host
-      backend = process.env.API_URI || 'https://hacktracks.org'
-      headless = proccess.env.HEADLESS_URI || 'https://farmerless.com'
+      backend = apiUri || 'https://hacktracks.org'
+      headless = headlessUri || 'https://farmerless.com'
       console.log('production settings:', appDomain, backend, headless)
     }
 
