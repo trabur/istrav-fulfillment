@@ -37,15 +37,16 @@
     let headless
     if (window.location.host === 'localhost:5000') {
       window.appDomain = 'istrav.com'
-      backend = 'http://localhost:1337'
       headless = 'http://localhost:9999'
-      console.log('localhost settings:', appDomain, backend, headless)
+      backend = 'http://localhost:1337'
+      io = 'http://localhost:3333'
+      console.log('localhost settings:', appDomain, backend, headless, io)
     } else {
       window.appDomain = window.location.host
+      headless = headlessUri || 'https://farmerless.com'
       backend = apiUri || 'https://api.hacktracks.org'
       io = ioUri || 'https://io.hacktracks.org'
-      headless = headlessUri || 'https://farmerless.com'
-      console.log('production settings:', appDomain, backend, headless)
+      console.log('production settings:', appDomain, backend, headless, io)
     }
 
     // headless.istrav.com scripts
