@@ -46,7 +46,7 @@
 
 <svelte:head>
   {#if app}
-	  <title>Message Bulltin Board - {app.labelName}</title>
+	  <title>Message Bulletin Board - {app.labelName}</title>
   {/if}
 </svelte:head>
 
