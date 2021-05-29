@@ -3,11 +3,7 @@ AAGHC.COM
 
 ```bash
 # development
-<<<<<<< HEAD
 $ npm run dev
-=======
-export PORT=5000; npm run dev
->>>>>>> 4cc8e6a7badeffa73fb1829957aaa9bbd04264aa
 ```
 
 ```bash

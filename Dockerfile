@@ -1,22 +1,14 @@
 FROM node:14
 
-# Create app directory
 WORKDIR /usr/src/app
+RUN pwd
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-COPY farmerless ./farmerless
-COPY src ./src
-COPY static ./static
-COPY svelte.config.js ./
+COPY . .
+RUN git submodule update --init --recursive
+RUN cd farmerless && npm install
 
 RUN npm install
 RUN npm run build
-
-# Bundle app source
-COPY . .
 
 EXPOSE 5000
 CMD [ "npm", "start" ]
